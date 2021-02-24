@@ -7,4 +7,4 @@ RUN apt-get update && \
     mkdir /root/.Checkmarx && \
     python3 create_checkmarx_ini_config.py 
 
-ENTRYPOINT ["python3", "/tag_project.py"]
+ENTRYPOINT ["/entrypoint.sh"]
