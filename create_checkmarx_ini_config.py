@@ -10,7 +10,8 @@ loader = FileSystemLoader("/")
 jinja_env = Environment(loader=loader)
 template = jinja_env.get_template("config_template.txt")
 
-os.mkdir(".Checkmarx")
+config_path = f"{os.getcwd()}/config.ini"
+os.environ["checkmarx_config_path"] = config_path
 
-with open(".Checkmarx/config.ini", "w") as config:
+with open(config_path, "w") as config:
     config.write(template.render(base_url=url, username=username, password=password))
