@@ -6,7 +6,6 @@ import requests
 
 os.environ["checkmarx_config_path"] = f"{os.getcwd()}/config.ini"
 
-from CheckmarxPythonSDK.CxODataApiSDK import get_all_projects_id_name
 from CheckmarxPythonSDK.CxRestAPISDK import ProjectsAPI
 from CheckmarxPythonSDK.CxRestAPISDK.sast.projects.dto.customFields import CxCustomField
 
