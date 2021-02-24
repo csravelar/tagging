@@ -32,6 +32,8 @@ def get_project_info(project_name):
 
 
 def main():
+    print("\n\n-----------------------\nWe start here\n---------------------\n\n")
+    print(f"{os.environ.get('checkmarx_config_path')}")
     project_name = os.environ.get("PROJECT_NAME")
     platform_tag = os.environ.get("PLATFORM_TAG")
 
