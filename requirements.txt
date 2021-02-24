@@ -1,2 +1,2 @@
-CheckmarxPythonSDK==0.1.5
+CheckmarxPythonSDK==0.2.2
 Jinja2==2.11.3
