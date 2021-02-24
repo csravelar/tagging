@@ -1,6 +1,6 @@
 FROM python:3.8.7-slim-buster
 
-COPY . .
+COPY . $GITHUB_WORKSPACE
 
 RUN apt-get update && \
     pip install -r requirements.txt && \
@@ -10,4 +10,4 @@ RUN apt-get update && \
 RUN echo "PWD is: $PWD"
 RUN echo $(ls)
 
-ENTRYPOINT ["python3", "tag_project.py"]
+ENTRYPOINT ["python3", "$GITHUB_WORKSPACE/tag_project.py"]
