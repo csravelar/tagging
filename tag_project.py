@@ -3,9 +3,6 @@ import os
 import sys
 
 import requests
-from CheckmarxPythonSDK.CxODataApiSDK import get_all_projects_id_name
-from CheckmarxPythonSDK.CxRestAPISDK import ProjectsAPI
-from CheckmarxPythonSDK.CxRestAPISDK.sast.projects.dto.customFields import CxCustomField
 
 
 def check_valid_platform_tag(platform_tag):
@@ -34,6 +31,9 @@ def get_project_info(project_name):
 def main():
     print("\n\n-----------------------\nWe start here\n---------------------\n\n")
     print(f"{os.environ.get('checkmarx_config_path')}")
+    from CheckmarxPythonSDK.CxODataApiSDK import get_all_projects_id_name
+    from CheckmarxPythonSDK.CxRestAPISDK import ProjectsAPI
+    from CheckmarxPythonSDK.CxRestAPISDK.sast.projects.dto.customFields import CxCustomField
     project_name = os.environ.get("PROJECT_NAME")
     platform_tag = os.environ.get("PLATFORM_TAG")
 
