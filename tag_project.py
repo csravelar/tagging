@@ -5,7 +5,7 @@ import sys
 import requests
 
 os.environ["checkmarx_config_path"] = f"{os.getcwd()}/config.ini"
-print(f"os.environ.get('checkmarx_config_path')")
+print(f"{os.environ.get('checkmarx_config_path')}")
 print("SUPER STUF")
 
 from CheckmarxPythonSDK.CxODataApiSDK import get_all_projects_id_name
