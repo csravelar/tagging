@@ -7,4 +7,7 @@ RUN apt-get update && \
     mkdir /root/.Checkmarx && \
     python3 create_checkmarx_ini_config.py 
 
+RUN echo "PWD is: $PWD"
+RUN echo $(ls)
+
 ENTRYPOINT ["python3", "tag_project.py"]
