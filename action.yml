@@ -3,3 +3,5 @@ description: 'Tag project in checkmarx with the right platform custom field'
 runs:
   using: 'docker'
   image: 'Dockerfile'
+  pre-entrypoint: './create_checkmarx_ini_config.py'
+  entrypoint: './tag_project.py'
