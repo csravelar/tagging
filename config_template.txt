@@ -1,0 +1,12 @@
+[checkmarx]
+base_url = {{ base_string }}
+username = {{ username }}
+password = {{ password }}
+grant_type = password
+scope = sast_rest_api
+client_id = resource_owner_client
+client_secret = 014DF517-39D1-4453-B7B3-9930C563627C
+url =  %(base_url)s/cxrestapi
+scan_preset = Checkmarx Default
+configuration = Default Configuration
+max_try = 3

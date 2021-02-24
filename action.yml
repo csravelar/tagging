@@ -1,0 +1,5 @@
+name: 'Tag Project'
+description: 'Tag project in checkmarx with the right platform custom field'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
