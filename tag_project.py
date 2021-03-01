@@ -1,10 +1,11 @@
 import json
+import pathlib
 import os
 import sys
 
 import requests
 
-os.environ["checkmarx_config_path"] = f"{os.getcwd()}/config.ini"
+os.environ["checkmarx_config_path"] = f"{str(pathlib.Path(__file__).parent.absolute())}/config.ini"
 
 from CheckmarxPythonSDK.CxRestAPISDK import ProjectsAPI
 from CheckmarxPythonSDK.CxRestAPISDK.sast.projects.dto.customFields import CxCustomField
@@ -34,8 +35,8 @@ def get_project_info(project_name):
 
 
 def main():
-    project_name = os.environ.get("PROJECT_NAME")
-    platform_tag = os.environ.get("PLATFORM_TAG")
+    project_name = os.environ["PROJECT_NAME"]
+    platform_tag = os.environ["PLATFORM_TAG"]
 
     project = get_project_info(project_name)
     if not project:
