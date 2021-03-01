@@ -2,6 +2,7 @@
 
 set -ux
 
+echo "LMFAO"
 sudo -E apt-get update
 sudo -E apt-get install curl git
 touch /usr/local/bin/lol.txt
