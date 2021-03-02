@@ -10,4 +10,5 @@ curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
 python3 get-pip.py
 git clone https://github.com/csravelar/tagging.git /usr/local/bin/tagging
 pip install -r /usr/loca/bin/tagging/requirements.txt
+echo "alias checkmarx_tag='bash /usr/local/bin/tagging/entrypoint.sh'" >> /etc/bashrc
 EOF
