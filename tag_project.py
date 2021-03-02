@@ -28,9 +28,13 @@ def main():
     team_name = os.environ["TEAM_NAME"]
 
     project_api = ProjectsAPI()
-    project_id = project_api.get_project_id_by_project_name_and_team_full_name(project_name, team_name)
+    project_id = project_api.get_project_id_by_project_name_and_team_full_name(
+        project_name, team_name
+    )
     if not project_id:
-        sys.exit(f"Your project {project_name} with team name {team_name} does not exist in checkmarx")
+        sys.exit(
+            f"Your project {project_name} with team name {team_name} does not exist in checkmarx"
+        )
 
     if not check_valid_platform_tag(platform_tag):
         sys.exit(f"You're platform tag {platform_tag} doesn't exist in cloudgov")
