@@ -28,12 +28,12 @@ in the command line to run the program and tag the project with the platform tag
 However, you will need to specify the following environment variables to the environment
 
 ```
-CHECKMARX_SERVER
-CHECKMARX_USERNAME
-CHECKMARX_PASSWORD
-PROJECT_NAME
-TEAM_NAME
-PLATFORM_TAG
+cxServer
+cxUsername
+cxPassword
+cxTeam
+cxProject
+cxPlatformTag
 ```
 You can use githubs secrets settings in the repo to securely store this info and then pass it to github workflows env section for this step. More information on those can be found here:
 
