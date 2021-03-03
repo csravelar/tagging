@@ -23,9 +23,9 @@ def check_valid_platform_tag(platform_tag):
 
 
 def main():
-    project_name = os.environ["PROJECT_NAME"]
-    platform_tag = os.environ["PLATFORM_TAG"]
-    team_name = os.environ["TEAM_NAME"]
+    project_name = os.environ["cxProject"]
+    team_name = os.environ["cxTeam"]
+    platform_tag = os.environ["cxPlatformTag"]
 
     project_api = ProjectsAPI()
     project_id = project_api.get_project_id_by_project_name_and_team_full_name(

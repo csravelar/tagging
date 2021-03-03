@@ -9,9 +9,9 @@ from jinja2 import Environment, FileSystemLoader
 
 
 def main():
-    base_url = os.environ["CHECKMARX_SERVER"]
-    username = os.environ["CHECKMARX_USERNAME"]
-    password = os.environ["CHECKMARX_PASSWORD"]
+    base_url = os.environ["cxServer"]
+    username = os.environ["cxUsername"]
+    password = os.environ["cxPassword"]
 
     # Tell jinja where in the filesytem we are going to read a file from
     cwd_path = str(pathlib.Path(__file__).parent.absolute())
