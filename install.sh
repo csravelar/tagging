@@ -9,4 +9,4 @@ sudo -E curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
 sudo -E python3 get-pip.py
 sudo -E git clone https://github.com/csravelar/tagging.git /usr/local/bin/tagging
 sudo -E pip3 install -r /usr/loca/bin/tagging/requirements.txt
-sudo -E echo "alias checkmarx_tag='bash /usr/local/bin/tagging/entrypoint.sh'" >> /etc/bashrc
+echo "alias checkmarx_tag='bash /usr/local/bin/tagging/entrypoint.sh'" | sudo tee -a /etc/bashrc
