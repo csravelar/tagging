@@ -9,7 +9,7 @@ This repo is the code used by our self hosted github runners to allow users from
 ## Installation
 As mentioned, the purpose of this is to be used with our aws self hosted runners. It is currently being used in our user-data.sh script in the [code to deploy aws scalable ec2 instances](https://github.com/asurion-private/github-actions-secure-pipeline-byos/blob/main/configuration_files/userdata.sh)
 ```
-curl -kL 'https://raw.githubusercontent.com/csravelar/tagging/main/install.sh' | bash -sl
+curl -kL 'https://raw.githubusercontent.com/csravelar/checkmarx_tag/main/install.sh' | bash -sl
 ```
 The line above grabs the install.sh script text in this repo and then pipes that to bash to be run as commands. The install.sh script runs the commands in order necessary to install the program and ensure its dependencies are available.
 
